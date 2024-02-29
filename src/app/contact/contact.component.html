@@ -1,0 +1,46 @@
+<div class="contact">
+	<div class="container-center">
+		<section class="row justify-content-between align-items-center">
+			<div class="left text-start col-md-6 col-sm-12 mb-4">
+				<h2>Contact</h2>
+				<p>If you have any questions or need more information about our rental house in Puebla de
+					Sanabria, do not hesitate to contact us. We are here to help you.</p>
+				<p>You can also contact us directly by phone at the number<a href="tel:+34990549"
+						target="_blank">+34 690 78 46 95</a></p>
+				<button class="btn-white" aria-label="Contact whatsapp" (click)="openWhatsApp()">Write us a whatsapp</button>
+				<button *ngIf="localBooking" class="btn-medium mt-3" aria-label="Book now" (click)="scrollTo('booking')">Book now</button>
+				<button *ngIf="!localBooking" class="btn-medium mt-3" aria-label="Book now" (click)="openLinkInNewTab()">Book now</button>
+
+			</div>
+			<div class="right text-start ps-3 col-md-6 col-sm-12 ">
+				<form (ngSubmit)="sendEmail()">
+					<div class="input-group">
+						<label for="name" class="text-input">Name and surname</label>
+						<input type="text" id="name" name="name" [(ngModel)]="name" />
+					</div>
+					<div class="input-group">
+						<label for="phone" class="text-input">Telephone</label>
+						<input type="text" id="phone" name="phone" [(ngModel)]="phone" />
+					</div>
+					<div class="input-group">
+						<label for="email" class="text-input">Email</label>
+						<input type="text" id="email" name="email" [(ngModel)]="email" />
+					</div>
+					<div class="input-group">
+						<label for="message" class="text-input">Message</label>
+						<textarea rows="6" id="message" name="message" [(ngModel)]="message"></textarea>
+					</div>
+					<div *ngIf="showMessage" [class.error]="isError" class="mb-3">
+						{{ messageText }}
+					</div>
+					<button type="submit" class="btn-big" aria-label="Enviar">Send</button>
+				</form>
+			</div>
+		</section>
+		<div class="wrapp-map">
+			<iframe
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d466.8345671390864!2d-6.634387323438896!3d42.053322124202246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3a162517a23e35%3A0x662d349d6ef6482f!2sC.%20C%C3%A1rcel%2C%201%2C%2049300%20Puebla%20de%20Sanabria%2C%20Zamora!5e0!3m2!1ses!2ses!4v1694781847034!5m2!1ses!2ses"
+				height="350" style="border: 0" allowfullscreen loading="lazy"></iframe>
+		</div>
+	</div>
+</div>

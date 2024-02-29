@@ -1,0 +1,15 @@
+<div class="about">
+  <div class="container-center">
+    <div class="row about-content">
+      <div class="left col-lg-4 col-md-12">
+        <div class="rounded-image" aria-hidden="true"></div>
+      </div>
+      <div class="right col-lg-7 col-md-9">
+        <h2 class="mb-4">About Us</h2>
+        <p>Enjoy a unique experience in our charming rental house in Puebla de Sanabria. You will have the opportunity to escape the hustle and bustle of everyday life and immerse yourself in the natural beauty of this picturesque town. With a rustic atmosphere and all the modern amenities, our house is the perfect place to relax and explore the wonders of Puebla de Sanabria.</p>
+				<button *ngIf="localBooking" class="btn-medium" aria-label="Book now" (click)="scrollTo('booking')">Book Now</button>
+				<button *ngIf="!localBooking" class="btn-medium" aria-label="Book now" (click)="openLinkInNewTab()">Book Now</button>
+      </div>
+    </div>
+  </div>
+</div>

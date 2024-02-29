@@ -1,0 +1,53 @@
+<div class="invoice">
+	<header>
+		<section>
+			<h1>Rental Summary</h1>
+			<span>{{ formatToday }}</span>
+		</section>
+		<section>
+			<span>{{ toPrint ? '0' + bookingId : '#####' }}</span>
+		</section>
+	</header>
+	<main>
+		<section class="invoice-details">
+			<!-- Booking Details -->
+			<figure>
+				<span><strong>Name:</strong></span>
+				<span>{{ bookingDetails.name }}</span>
+			</figure>
+			<figure>
+				<span><strong>Email:</strong></span>
+				<span>{{ bookingDetails.email }}</span>
+			</figure>
+			<figure>
+				<span><strong>Phone:</strong></span>
+				<span>{{ bookingDetails.phone }}</span>
+			</figure>
+			<figure>
+				<span><strong>Number of Guest:</strong></span>
+				<span>{{ bookingDetails.guests }}</span>
+			</figure>
+			<figure>
+				<span><strong>Entry Date:</strong></span>
+				<span>{{ bookingDetails.dateIn }}</span>
+			</figure>
+			<figure>
+				<span><strong>Depature Date:</strong></span>
+				<span>{{ bookingDetails.dateOut }}</span>
+			</figure>
+		</section>
+
+		<section class="invoice-price">
+			<!-- Total Price -->
+			<figure>
+				<span>Total</span>
+				<span>{{ bookingDetails.price }}€</span>
+			</figure>
+		</section>
+	</main>
+	<section class="footer">
+		<!-- 2 Buttons options -->
+		<button *ngIf="!toPrint" class="btn-black" (click)="scrollTo('booking')">Change Date</button>
+		<button *ngIf="toPrint" class="btn-black" (click)="generateAndDownloadPDF()">Print Receipt</button>
+	</section>
+</div>

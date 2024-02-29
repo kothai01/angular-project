@@ -1,0 +1,33 @@
+<div class="services">
+  <div class="container-center pt-0">
+    <div class="row text-start justify-content-center">
+      <section class="left col-md-5 col-sm-10">
+        <h3>Available services:</h3>
+        <ul class="custom-list">
+          <li><i class="fa-solid fa-check" aria-label="Checkmark"></i> Kitchen fully equiped</li>
+          <li><i class="fa-solid fa-check" aria-label="Checkmark"></i> Washing machine</li>
+          <li><i class="fa-solid fa-check" aria-label="Checkmark"></i> Television</li>
+          <li><i class="fa-solid fa-check" aria-label="Checkmark"></i> Hair dryer</li>
+          <li><i class="fa-solid fa-check" aria-label="Checkmark"></i>Area to work</li>
+          <li><i class="fa-solid fa-check" aria-label="Checkmark"></i> Free parking</li>
+        </ul>
+				<button *ngIf="localBooking" class="btn-medium mb-5" aria-label="Book now" (click)="scrollTo('booking')">Book now</button>
+				<button *ngIf="!localBooking" class="btn-medium mb-5" aria-label="Book now" (click)="openLinkInNewTab()">Book now</button>
+      </section>
+      <section class="right col-md-5 col-sm-10">
+        <h3>Explore the area:</h3>
+        <ul class="custom-list">
+          <li><i class="fa-solid fa-check" aria-label="Checkmark"></i> Hiking in the Montes de León</li>
+          <li><i class="fa-solid fa-check" aria-label="Checkmark"></i> Tasting of local cuisine</li>
+          <li><i class="fa-solid fa-check" aria-label="Checkmark"></i> Visit the charming local villages</li>
+        </ul>
+        <h3 class="mt-5">For your adventure:</h3>
+        <ul class="custom-list">
+          <li><i class="fa-solid fa-check" aria-label="Checkmark"></i> Mountain bike rental</li>
+          <li><i class="fa-solid fa-check" aria-label="Checkmark"></i> Information on hiking trails</li>
+          <li><i class="fa-solid fa-check" aria-label="Checkmark"></i> Guided tours available</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="home">
+	<div class="container-center">
+		<h1>Book your next adventure</h1>
+		<p class="text-header">
+			Discover the perfect getaway in the heart of Puebla de Sanabria, where rustic charm meets modern comfort.
+		</p>
+		<div class="row-buttons-container">
+			<div class="pe-2 ps-4 mb-3 m-0">
+				<button *ngIf="localBooking" class="btn-small" aria-label="Book now" (click)="scrollTo('booking')">Book now</button>
+				<button *ngIf="!localBooking" class="btn-small" aria-label="Book now" (click)="openLinkInNewTab()">Book now</button>
+			</div>
+			<div class="ps-2 m-0">
+				<button class="btn-white" aria-label="More information" (click)="scrollTo('gallery')">More information</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="card-holder col-lg-3 col-md-5 col-sm-5">
+				<div class="card">
+					<img class='card-img' src="assets/images/trecking.png" alt="Trekking" />
+					<h4 class="card-text">Trekking</h4>
+				</div>
+			</div>
+			<div class="card-holder col-lg-3 col-md-5 col-sm-5">
+				<div class="card">
+					<img class='card-img' src="assets/images/tent-draw.png" alt="Camping" />
+					<h4 class="card-text">Nature</h4>
+				</div>
+			</div>
+			<div class="card-holder col-lg-3 col-md-5 col-sm-5">
+				<div class="card">
+					<img class='card-img' src="assets/images/tipi.png" alt="Beach Tents" />
+					<h4 class="card-text">Comfort</h4>
+				</div>
+			</div>
+			<div class="card-holder col-lg-3 col-md-5 col-sm-5">
+				<div class="card">
+					<img class='card-img' src="assets/images/fire.png" alt="News and Events" />
+					<h4 class="card-text">Activities</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
